@@ -1,3 +1,14 @@
+Initial Setup
+=============
+Download and install nodejs
+https://nodejs.org/en/
+
+Building front-end resources
+============================
+build front-end resources and copy resources from dist folder to target project dir bootstrap/webfiles.
+
+  mvn -P frontend
+
 Running locally
 ===============
 

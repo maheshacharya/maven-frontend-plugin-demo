@@ -9,26 +9,27 @@
   <artifactId>frontend</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <description>Frontend</description>
+  <properties>
+    <node.version>v5.9.0</node.version>
+    <npm.version>3.9.5</npm.version>
+  </properties>
   <build>
     <plugins>
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
         <version>1.0</version>
-
         <executions>
-
           <execution>
             <id>install node and npm</id>
             <goals>
               <goal>install-node-and-npm</goal>
             </goals>
             <configuration>
-              <nodeVersion>v5.9.0</nodeVersion>
-              <npmVersion>3.9.5</npmVersion>
+              <nodeVersion>${node.version}</nodeVersion>
+              <npmVersion>${npm.version}</npmVersion>
             </configuration>
           </execution>
-
           <execution>
             <id>npm install</id>
             <goals>
