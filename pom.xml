@@ -274,17 +274,10 @@
         <module>cms</module>
         <module>site</module>
         <module>essentials</module>
-      </modules>
-    </profile>
-    <profile>
-      <id>frontend</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-      </activation>
-      <modules>
         <module>frontend</module>
       </modules>
     </profile>
+
     <profile>
       <id>cargo.run</id>
       <build>

@@ -1,8 +1,4 @@
-Building front-end resources
-============================
-Build front-end resources and copy resources from dist folder to target project dir bootstrap/webfiles.
 
-  mvn -P frontend
 
 Running locally
 ===============
