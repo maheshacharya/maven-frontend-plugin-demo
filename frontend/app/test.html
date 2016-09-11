@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <style>
+            #label-container{
+    padding:4px;
+    height:30px;
+    background-color:black;
+    color:#fff;
+    font-size:12px;
+    z-index: 999999;
+}
+body{
+    font-family: arial;
+    margin:0;
+
+}
+
+.geo-button{
+    padding:8px;
+    border-radius:2px;
+    font-size:16px;
+    font-weight:bold;
+    border:none;
+    float:right;
+    right:10px;
+    margin-left:4px;
+    display:none;
+}
+
+.geo-button:hover{
+    background-color:#ccc;
+}
+.top-container{
+    padding:4px;background-color:#000;
+    height:40px;
+}
+
+.buttons-form{
+    float:right;right:10px;
+
+}
+
+
+
+.panel-heading{
+    font-size:12px;
+    font-weight:bold;
+    color:#fff;
+}
+
+select {
+
+    border: 1px solid #111;
+    background: transparent;
+    width: 150px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color:#fff;
+
+}
+
+.info{
+
+    max-width:300px;
+    position:absolute;
+    top:120px;
+    z-index:99999999;
+    background-color:rgba(0,0,0,.8);
+    color:#fff;
+}
+
+ .dialog-main{
+    padding:20px;
+}
+
+ .dialog-toolbar{
+     width:100%;
+
+
+ }
+
+
+ .info .minimized{
+     min-width:20px;
+     max-width:20px;
+     width:20px;
+     border:0px solid #fff;
+     border-radius:10px;
+ }
+
+ .info .opened{
+     min-width:300px;
+     width:300px;
+     max-width:300px;
+     border-radius:0px;
+ }
+.dialog-close-button, .dialog-open-button{
+    padding:4px;
+    color:#fff;
+    float:right;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+            input[type='text']{
+            width:200px;
+                height:30px;
+                border:none;
+                margin-bottom:2px;
+            padding:4px;
+                font-weight:bold;
+                font-size:16px;
+                
+            }
+            
+            .button-save{
+                border:none;
+                padding:4px;
+                border-radius:2px;
+                height:28px;
+                margin-bottom:4px;
+                font-size:16px;
+                
+            }
+            .button-save:hover{
+                background-color: #fff;
+            }
+
+.dialog-close-button:hover{
+    //background-color: red;
+}
+        </style>
+    </head>
+<body>
+   <div id="info" class="info">
+    <div class="dialog-toolbar"><span class="dialog-open-button" style="display:none"> &#10151; </span><span class="dialog-close-button"> &#x274C; </span></div>
+    <div class="dialog-main">
+    sjdsdjskjdkj
+       <div>
+        Target Name:
+        <input type="text" name="targetName"/>
+           </div>
+        <div>
+        Target Value:
+        <input type="text" name="targetValues"/>
+            </div>
+        <button class="button-save">Save</button>
+    </div>
+  </div>
+</body>
+</html>

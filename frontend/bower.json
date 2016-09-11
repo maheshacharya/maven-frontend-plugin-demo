@@ -3,7 +3,9 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "jquery": "^2.2.4",
+    "requirejs": "^2.2.0"
   },
   "overrides": {
     "bootstrap-sass": {

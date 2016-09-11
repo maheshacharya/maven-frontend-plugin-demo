@@ -165,7 +165,32 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+var minify = require('gulp-minify');
+ 
+gulp.task('compress', function() {
+  gulp.src(['app/scripts/*.js'])
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'-min.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: ['.combo.js', '-min.js']
+    }))
+    .pipe(gulp.dest('dist/scripts'))
+  
+});
+
+
+var cleanCSS = require('gulp-clean-css');
+
+gulp.task('minify-css', function() {
+  return gulp.src('app/styles/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist/styles'));
+});
+
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras','compress', 'minify-css'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
